@@ -1,0 +1,1103 @@
+body {
+  background: #000;
+}
+html {
+  scroll-behavior: smooth;
+}
+header {
+  background-color: #000000;
+  border-radius: 7px;
+  border: 2px solid rgb(15, 15, 15);
+  display: flex;
+  height: 110px;
+  padding: 0 30px;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+.logo img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.menu-toggle {
+  display: none;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.logo-text h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.logo-text h3 {
+  margin: 2px 0 0;
+  color: #f5a623;
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 60px;
+  list-style: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  align-items: center;
+}
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f5a623;
+}
+
+.nav-links a.active {
+  color: #f5a623;
+  border-bottom: 3px solid #f5a623;
+}
+.search-container {
+  width: 330px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 0 15px;
+  transition: 0.3s;
+}
+
+.search-container:hover {
+  border-color: #ffffff;
+  width: 350px;
+}
+.search-container i {
+  color: #999;
+
+  margin-right: 10px;
+}
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+}
+
+.search-input::placeholder {
+  color: #777;
+}
+/* 1440px */
+@media screen and (max-width: 1440px) {
+  header {
+    background-color: rgb(3, 3, 3);
+  }
+  nav {
+    flex: 1;
+
+    min-width: 0; /* THE FIX: allows nav to actually shrink */
+  }
+  .logo {
+    flex-shrink: 0;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-left: -50px;
+  }
+
+  .nav-links a {
+    padding: 6px; /* was 8px 12px — saves ~28px total */
+    font-size: 15px; /* slightly smaller to help fit */
+    white-space: nowrap;
+  }
+
+  .logo-text h2 {
+    font-size: 22px; /* was 25px */
+    white-space: nowrap;
+    margin-left: -10px;
+  }
+
+  .logo-text h3 {
+    font-size: 16px; /* was 16px */
+    white-space: nowrap;
+    margin-top: 0;
+    margin-left: -2px;
+  }
+
+  .search-container {
+    width: 240px; /* was 300px — biggest space saver */
+    height: 42px;
+    flex-shrink: 0;
+    padding: 0 12px;
+  }
+
+  .search-container:hover {
+    width: 260px;
+    border-color: #fff;
+  }
+}
+/* 1024px */
+@media screen and (max-width: 1024px) {
+  header {
+    background-color: rgb(3, 3, 3);
+  }
+  nav {
+    flex: 1;
+
+    min-width: 0; /* THE FIX: allows nav to actually shrink */
+  }
+  .logo {
+    flex-shrink: 0;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+    margin-left: -50px;
+  }
+
+  .nav-links a {
+    padding: 6px; /* was 8px 12px — saves ~28px total */
+    font-size: 15px; /* slightly smaller to help fit */
+    white-space: nowrap;
+  }
+
+  .logo-text h2 {
+    font-size: 22px; /* was 25px */
+    white-space: nowrap;
+    margin-left: -10px;
+  }
+
+  .logo-text h3 {
+    font-size: 16px; /* was 16px */
+    white-space: nowrap;
+    margin-top: 0;
+    margin-left: -2px;
+  }
+
+  .search-container {
+    width: 190px; /* was 300px — biggest space saver */
+    height: 42px;
+    flex-shrink: 0;
+    padding: 0 12px;
+  }
+
+  .search-container:hover {
+    width: 210px;
+    border-color: #fff;
+  }
+}
+/* tablet */
+@media (max-width: 768px) {
+  header {
+    height: 70px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+  }
+
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-text h2 {
+    font-size: 14px;
+    margin-left: -2px;
+    white-space: nowrap;
+  }
+
+  .logo-text h3 {
+    font-size: 10px;
+    margin-left: 2px;
+    white-space: nowrap;
+  }
+
+  nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-links {
+    gap: 7px;
+    padding: 0;
+    margin-left: 5px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    padding: 3px 4px;
+    white-space: nowrap;
+  }
+
+  .search-container {
+    width: 140px;
+    height: 33px;
+    padding: 0 10px;
+  }
+
+  .search-container:hover {
+    border-color: #fff;
+    width: 160px;
+  }
+
+  .search-container i {
+    margin-right: 8px;
+    font-size: 12px;
+    margin-left: 0;
+  }
+
+  .search-input {
+    font-size: 13px;
+  }
+}
+/* mobile 480px */
+
+@media (max-width: 480px) {
+  header {
+    height: 70px;
+    padding: 0 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav {
+    display: none;
+  }
+  .search-container {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 8px;
+    border-radius: 8px;
+  }
+
+  .search-input {
+    display: flex;
+    font-size: 0;
+  }
+  .search-input:hover {
+    font-size: 13px;
+    color: white;
+  }
+  .search-container i {
+    font-size: 14px;
+    margin: 5px;
+  }
+  .search-container:hover {
+    width: 135px;
+    height: 28px;
+  }
+  .menu-toggle {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+    padding: 0;
+
+    background: #1b1b1b;
+    color: #f5a623;
+    border: 1px solid #444;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .menu-toggle:hover {
+    background: #020202;
+    transform: scale(1.1);
+    border: 1px solid #e9e3e3;
+  }
+}
+/* ===========================
+   MAIN BANNER
+=========================== */
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.main-banner {
+  position: relative;
+  flex: 4;
+}
+
+.main-banner img {
+  width: 100%;
+  max-width: 1600px;
+  height: 430px;
+  display: block;
+  border: 2px solid #1a1919;
+  border-radius: 10px;
+}
+
+/* ===========================
+   JOIN BUTTON
+=========================== */
+
+.join-btn {
+  position: absolute;
+  bottom: 70px;
+  left: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 140px;
+  height: 45px;
+  background: #f5a623;
+  color: #000;
+  border: 3px solid #000;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.join-btn:hover {
+  background: #fff;
+}
+.join-btn i {
+  font-size: 16px;
+}
+
+/* ===========================
+   PLAYER CARD
+=========================== */
+
+.player-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.player-spotlight {
+  width: 450px;
+  height: 390px;
+  margin-left: 40px;
+  background: #111;
+  border: 2px solid #1d1d1d;
+  border-radius: 15px;
+  color: white;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.player-spotlight:hover {
+  border-color: #f5a623;
+
+  box-shadow: 0 0 25px rgba(245, 166, 35, 0.4);
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.player-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 28px;
+  font-weight: 700;
+
+  margin: 0 0 25px 0;
+}
+
+.player-title i {
+  color: #f5a623;
+}
+
+/* ===========================
+   PLAYER IMAGE
+=========================== */
+
+.player-image {
+  width: 180px;
+
+  height: 220px;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  border: 2px solid #555;
+
+  margin-bottom: 20px;
+}
+
+.player-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: fill;
+}
+
+/* ===========================
+   PLAYER NAME
+=========================== */
+
+.player-name h3 {
+  font-size: 28px;
+  margin-top: -12px;
+  margin-bottom: 8px;
+}
+
+/* ===========================
+   PLAYER ROLE
+=========================== */
+
+.player-role {
+  color: #f5a623;
+  font-size: 18px;
+  margin-bottom: 25px;
+  margin-top: -10px;
+  margin-left: 50px;
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.stats-container {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  position: absolute;
+
+  margin-left: 240px;
+
+  margin-top: -300px;
+}
+
+.stat-box {
+  width: 160px;
+  height: 25px;
+  background: #1b1b1b;
+  border: 1px solid #c4bebe;
+  border-radius: 10px;
+  padding: 13px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-name {
+  width: 80px;
+  font-size: 17px;
+  color: #c7c7c7;
+  text-align: center;
+}
+
+.stat-value {
+  width: 50px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #f5a623;
+}
+
+.player-btn {
+  width: 250px;
+  height: 40px;
+  background: #f5a623;
+  color: #111;
+  position: absolute;
+  top: 290px;
+  left: -130px;
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.player-btn:hover {
+  background: #ffffff;
+  color: #000;
+  box-shadow: 0 5px 15px rgba(245, 166, 35, 0.4);
+}
+@media (max-width: 1440px) {
+  .hero {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 7px;
+  }
+
+  .main-banner {
+    flex: 1;
+  }
+
+  .main-banner img {
+    width: 100%;
+    max-width: 1000px;
+    height: 350px;
+    object-fit: fill;
+    border: 2px solid #1a1919;
+    border-radius: 10px;
+  }
+  .player-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .join-btn {
+    position: absolute;
+    bottom: 60px;
+    left: 50px;
+    height: 40px;
+    font-size: 17px;
+  }
+  .player-spotlight {
+    width: 340px;
+    height: 310px;
+  }
+  /* ===========================
+   TITLE
+=========================== */
+
+  .player-title {
+    font-size: 25px;
+  }
+
+  .player-title i {
+    color: #f5a623;
+    font-size: 22px;
+  }
+
+  /* ===========================
+   PLAYER IMAGE
+=========================== */
+
+  .player-image {
+    width: 170px;
+    height: 165px;
+  }
+  /* ===========================
+   PLAYER NAME
+=========================== */
+
+  .player-name h3 {
+    font-size: 20px;
+    margin-left: 17px;
+  }
+  .player-role {
+    font-size: 14px;
+    margin-top: -9px;
+  }
+
+  /* ===========================
+   STATS
+=========================== */
+
+  .stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    position: absolute;
+    margin-left: 205px;
+    margin-top: -230px;
+  }
+
+  .stat-box {
+    width: 100px;
+    height: 17px;
+    background: #1b1b1b;
+    border: 1px solid #585656;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    margin-top: 1px;
+  }
+
+  .stat-name {
+    display: inline-block;
+    font-size: 15px;
+    color: #c7c7c7;
+    margin-right: 20px;
+  }
+
+  .stat-value {
+    display: inline-block;
+    font-size: 19px;
+  }
+
+  .player-btn {
+    width: 220px;
+    height: 35px;
+    position: absolute;
+    top: 216px;
+    left: -140px;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 1024px) {
+  .hero {
+    gap: 6px;
+    margin-top: 7px;
+  }
+  .main-banner img {
+    width: 100%;
+    max-width: 700px;
+    height: 250px;
+  }
+  .player-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .join-btn {
+    position: absolute;
+    width: 110px;
+    top: 180px;
+    left: 32px;
+    text-align: center;
+    height: 30px;
+    font-size: 12px;
+  }
+  .player-spotlight {
+    width: 250px;
+    height: 210px;
+    margin-top: -1px;
+  }
+  /* ===========================
+   TITLE
+=========================== */
+
+  .player-title {
+    margin-top: -10px;
+    font-size: 17px;
+    gap: 7px;
+  }
+
+  .player-title i {
+    color: #f5a623;
+    font-size: 15px;
+  }
+
+  /* ===========================
+   PLAYER IMAGE
+=========================== */
+
+  .player-image {
+    width: 130px;
+    height: 140px;
+    margin-top: -10px;
+  }
+  /* ===========================
+   PLAYER NAME
+=========================== */
+
+  .player-name h3 {
+    font-size: 12px;
+    margin-left: 27px;
+    margin-top: -19px;
+  }
+  .player-role {
+    font-size: 9px;
+    margin-top: -9px;
+    margin-left: 45px;
+  }
+
+  /* ===========================
+   STATS
+=========================== */
+
+  .stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    position: absolute;
+    margin-left: 150px;
+    margin-top: -180px;
+  }
+
+  .stat-box {
+    width: 70px;
+    height: 6px;
+    background: #1b1b1b;
+    border: 1px solid #585656;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .stat-name {
+    display: inline-block;
+    font-size: 12px;
+    color: #c7c7c7;
+    margin: 0;
+  }
+
+  .stat-value {
+    display: inline-block;
+    font-size: 13px;
+    margin: 0;
+  }
+
+  .player-btn {
+    width: 180px;
+    height: 22px;
+    position: absolute;
+    top: 163px;
+    left: -113px;
+    position: absolute;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    gap: 2px;
+    margin-top: 7px;
+  }
+  .main-banner img {
+    width: 100%;
+    max-width: 500px;
+    height: 200px;
+  }
+  .player-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .join-btn {
+    position: absolute;
+    width: 85px;
+    top: 145px;
+    left: 28px;
+    text-align: center;
+    height: 27px;
+    font-size: 10px;
+  }
+  .join-btn i {
+    font-size: 12px;
+  }
+  .player-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .player-spotlight {
+    width: 170px;
+    height: 160px;
+    margin-top: -1px;
+  }
+  /* ===========================
+   TITLE
+=========================== */
+
+  .player-title {
+    margin-top: -10px;
+    font-size: 12px;
+    gap: 7px;
+  }
+
+  .player-title i {
+    color: #f5a623;
+    font-size: 11px;
+  }
+
+  /* ===========================
+   PLAYER IMAGE
+=========================== */
+
+  .player-image {
+    width: 100px;
+    height: 110px;
+    margin-top: -10px;
+  }
+  /* ===========================
+   PLAYER NAME
+=========================== */
+
+  .player-name h3 {
+    font-size: 9px;
+    margin-left: 20px;
+    margin-top: -19px;
+  }
+  .player-role {
+    font-size: 6px;
+    margin-top: -8px;
+    margin-left: 33px;
+  }
+
+  /* ===========================
+   STATS
+=========================== */
+
+  .stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    position: absolute;
+    margin-left: 150px;
+    margin-top: -149px;
+  }
+
+  .stat-box {
+    width: 40px;
+    height: 2px;
+    background: #1b1b1b;
+    border: 1px solid #585656;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -35px;
+  }
+
+  .stat-name {
+    display: inline-block;
+    font-size: 9px;
+    color: #c7c7c7;
+    margin: 0;
+  }
+
+  .stat-value {
+    display: inline-block;
+    font-size: 11px;
+    margin: 0;
+  }
+
+  .player-btn {
+    width: 140px;
+    height: 20px;
+    position: absolute;
+    top: 128px;
+    left: -130px;
+    position: absolute;
+    font-size: 11px;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* ==========================
+      HERO
+  ========================== */
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* ==========================
+      BANNER
+  ========================== */
+
+  .main-banner {
+    position: relative;
+  }
+
+  .main-banner img {
+    width: 100%;
+    max-width: 405px;
+    height: 150px;
+    border-radius: 10px;
+  }
+
+  /* ==========================
+      JOIN BUTTON
+  ========================== */
+
+  .join-btn {
+    position: absolute;
+    left: 20px;
+    top: 110px;
+    width: 60px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 6px;
+    border-radius: 6px;
+  }
+  .join-btn i {
+    font-size: 7px;
+  }
+  /* ==========================
+      PLAYER CONTAINER
+  ========================== */
+  .player-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2px;
+    width: 100%;
+    position: relative;
+    left: -38px;
+  }
+  /* ==========================
+      PLAYER CARD
+  ========================== */
+  .player-spotlight {
+    position: absolute;
+    width: 160px;
+    height: 180px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  /* ==========================
+      TITLE
+  ========================== */
+
+  .player-title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: -4px;
+    font-size: 10px;
+  }
+  .player-title i {
+    font-size: 10px;
+  }
+  /* ==========================
+      IMAGE
+  ========================== */
+  .player-image {
+    width: 80px;
+    height: 90px;
+    position: absolute;
+    top: 35px;
+  }
+  .player-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ==========================
+      NAME
+  ========================== */
+
+  .player-name h3 {
+    font-size: 12px;
+    text-align: center;
+
+    margin: 8px 0 3px;
+  }
+
+  /* ==========================
+      ROLE
+  ========================== */
+
+  .player-role {
+    text-align: center;
+    font-size: 9px;
+    color: #f5a623;
+  }
+
+  /* ==========================
+      STATS
+  ========================== */
+
+  .stats-container {
+    position: absolute;
+
+    top: 50px;
+    right: -78px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .stat-box {
+    width: 72px;
+    height: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8px;
+
+    background: #1b1b1b;
+    border: 1px solid #444;
+    border-radius: 8px;
+  }
+
+  .stat-name {
+    font-size: 9px;
+    color: #c7c7c7;
+    margin: 0;
+  }
+
+  .stat-value {
+    font-size: 11px;
+    font-weight: bold;
+    color: #f5a623;
+    margin: 0;
+  }
+
+  /* ==========================
+      BUTTON
+  ========================== */
+
+  .player-btn {
+    width: 120px;
+    height: 25px;
+
+    display: block;
+    margin: 12px auto 0;
+
+    font-size: 11px;
+  }
+}
